@@ -168,6 +168,7 @@ if st.button("🎯 ทำนายความเสี่ยง" , use_containe
             prediction = model.predict(input_array)[0]
             probability = model.predict_proba(input_array)[0]
 
+
             # แสดงผลลัพธ์
             risk_level = "🔴 ความเสี่ยงสูง" if prediction == 1 else "🟢 ความเสี่ยงต่ำ"
             confidence = probability[prediction] * 100
